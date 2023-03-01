@@ -1,1 +1,2 @@
-# bapi_anlegen_materialstammdaten
+# BAPI_MATERIAL_SAVEDATA 
+ - Anlegen und Ändern von Materialstammdaten
