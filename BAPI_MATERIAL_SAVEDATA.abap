@@ -100,3 +100,12 @@ types: begin of ty_material,
        end of ty_material.
 
 
+data: gs_bapimathead          type bapimathead,
+      gs_clientdata           type bapi_mara,
+      gs_clientdatax          type bapi_marax,
+      gs_plantdata            type bapi_marc,
+      gs_plantdatax           type bapi_marcx,
+      gs_storagelocationdata  type bapi_mard,
+      gs_storagelocationdatax type bapi_mardx,
+      gs_valuationdata        type bapi_mbew,
+      gs_valuationdatax       type bapi_mbewx.
