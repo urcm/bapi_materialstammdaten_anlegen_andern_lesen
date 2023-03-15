@@ -118,3 +118,6 @@ data: gt_unitsofmeasure  type standard table of bapi_marm,
       gs_unitsofmeasure  like line of gt_unitsofmeasure,
       gt_unitsofmeasurex type standard table of bapi_marmx,
       gs_unitsofmeasurex like line of gt_unitsofmeasurex.
+      
+data: gs_return type bapiret2.
+data: gt_returnmessages  type standard table of bapi_matreturn2.      
