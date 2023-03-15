@@ -109,3 +109,12 @@ data: gs_bapimathead          type bapimathead,
       gs_storagelocationdatax type bapi_mardx,
       gs_valuationdata        type bapi_mbew,
       gs_valuationdatax       type bapi_mbewx.
+
+
+data: gt_materialdescription type standard table of bapi_makt,
+      gs_materialdescription like line of gt_materialdescription.
+
+data: gt_unitsofmeasure  type standard table of bapi_marm,
+      gs_unitsofmeasure  like line of gt_unitsofmeasure,
+      gt_unitsofmeasurex type standard table of bapi_marmx,
+      gs_unitsofmeasurex like line of gt_unitsofmeasurex.
