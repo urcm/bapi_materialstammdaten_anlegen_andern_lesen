@@ -133,3 +133,15 @@ start-of-selection.
   gs_bapimathead-basic_view = abap_true.
   gs_bapimathead-purchase_view = abap_true.
   gs_bapimathead-account_view = abap_true.
+
+
+******* Mandantenebene ausfüllen ****************
+
+  data(lv_ntgew) = '4.56'."conv ntgew( '4,56' ).
+  shift lv_ntgew left deleting leading space.
+
+  gs_clientdata-del_flag = abap_false.
+  gs_clientdata-matl_group = '01'.
+  gs_clientdata-base_uom = 'EA'.
+  gs_clientdata-net_weight = lv_ntgew."conv ntgew( '4,56' ).
+  gs_clientdata-unit_of_wt = 'KG'.
