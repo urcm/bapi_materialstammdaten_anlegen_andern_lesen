@@ -121,3 +121,15 @@ data: gt_unitsofmeasure  type standard table of bapi_marm,
       
 data: gs_return type bapiret2.
 data: gt_returnmessages  type standard table of bapi_matreturn2.      
+
+
+start-of-selection.
+
+******* Kopfdaten ausfüllen ****************
+
+  gs_bapimathead-material = 'ZMADM3'.
+  gs_bapimathead-ind_sector = 'M'.
+  gs_bapimathead-matl_type = 'FHMI'.
+  gs_bapimathead-basic_view = abap_true.
+  gs_bapimathead-purchase_view = abap_true.
+  gs_bapimathead-account_view = abap_true.
