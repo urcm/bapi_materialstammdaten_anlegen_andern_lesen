@@ -145,3 +145,11 @@ start-of-selection.
   gs_clientdata-base_uom = 'EA'.
   gs_clientdata-net_weight = lv_ntgew."conv ntgew( '4,56' ).
   gs_clientdata-unit_of_wt = 'KG'.
+  
+******* Speicherflags ausfüllen ****************
+
+  gs_clientdatax-del_flag = abap_true.
+  gs_clientdatax-matl_group = abap_true.
+  gs_clientdatax-base_uom = abap_true.
+  gs_clientdatax-net_weight = abap_true.
+  gs_clientdatax-unit_of_wt = abap_true.
