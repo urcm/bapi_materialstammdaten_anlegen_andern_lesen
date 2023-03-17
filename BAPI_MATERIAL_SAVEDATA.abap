@@ -153,3 +153,9 @@ start-of-selection.
   gs_clientdatax-base_uom = abap_true.
   gs_clientdatax-net_weight = abap_true.
   gs_clientdatax-unit_of_wt = abap_true.
+
+******* Werksebene ausfüllen ****************
+
+  gs_plantdata-plant = 'ZM03'.
+  gs_plantdata-del_flag = abap_false.
+  gs_plantdata-pur_group = '001'.
