@@ -159,3 +159,11 @@ start-of-selection.
   gs_plantdata-plant = 'ZM03'.
   gs_plantdata-del_flag = abap_false.
   gs_plantdata-pur_group = '001'.
+  
+  ******* Valuation ausfüllen ****************
+
+  gs_valuationdata-val_area = 'ZM03'.
+  gs_valuationdata-del_flag = abap_false.
+  gs_valuationdata-price_ctrl = 'S'.
+  gs_valuationdata-moving_pr = '650.25'.
+  gs_valuationdata-std_price = '652.20'.
