@@ -167,3 +167,11 @@ start-of-selection.
   gs_valuationdata-price_ctrl = 'S'.
   gs_valuationdata-moving_pr = '650.25'.
   gs_valuationdata-std_price = '652.20'.
+  
+  ******* Speicherflags ausfüllen ****************
+
+  gs_valuationdatax-val_area = 'ZM03'.
+  gs_valuationdatax-del_flag = abap_true.
+  gs_valuationdatax-price_ctrl = abap_true.
+  gs_valuationdatax-moving_pr = abap_true.
+  gs_valuationdatax-std_price = abap_true.
