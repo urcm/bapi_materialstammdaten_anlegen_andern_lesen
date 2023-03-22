@@ -175,3 +175,9 @@ start-of-selection.
   gs_valuationdatax-price_ctrl = abap_true.
   gs_valuationdatax-moving_pr = abap_true.
   gs_valuationdatax-std_price = abap_true.
+  
+  ******* Lagerort ausfüllen ****************
+
+  gs_storagelocationdata-plant = 'ZM03'.
+  gs_storagelocationdata-stge_loc = 'L001'.
+  gs_storagelocationdata-del_flag = abap_false.
