@@ -181,3 +181,9 @@ start-of-selection.
   gs_storagelocationdata-plant = 'ZM03'.
   gs_storagelocationdata-stge_loc = 'L001'.
   gs_storagelocationdata-del_flag = abap_false.
+  
+  ******* Speicherflags ausfüllen ****************
+
+  gs_storagelocationdatax-plant = 'ZM03'.
+  gs_storagelocationdatax-stge_loc = 'L001'.
+  gs_storagelocationdatax-del_flag = abap_false.
