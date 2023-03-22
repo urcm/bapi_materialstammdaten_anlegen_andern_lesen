@@ -187,3 +187,10 @@ start-of-selection.
   gs_storagelocationdatax-plant = 'ZM03'.
   gs_storagelocationdatax-stge_loc = 'L001'.
   gs_storagelocationdatax-del_flag = abap_false.
+  
+  ******* Materialkurztext ausfüllen ****************
+
+  gs_materialdescription-langu = sy-langu.
+  gs_materialdescription-langu_iso = cl_i18n_languages=>sap1_to_sap2( im_lang_sap1 = sy-langu ).
+  gs_materialdescription-matl_desc = 'Computer 13"'.
+  append gs_materialdescription to gt_materialdescription.
