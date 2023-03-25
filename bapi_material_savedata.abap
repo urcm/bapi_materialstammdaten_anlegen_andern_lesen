@@ -194,3 +194,9 @@ start-of-selection.
   gs_materialdescription-langu_iso = cl_i18n_languages=>sap1_to_sap2( im_lang_sap1 = sy-langu ).
   gs_materialdescription-matl_desc = 'Computer 13"'.
   append gs_materialdescription to gt_materialdescription.
+  
+  gs_unitsofmeasure-alt_unit = 'EA'.
+  gs_unitsofmeasure-gross_wt = conv brgew( '4.65' ).
+  gs_unitsofmeasure-unit_of_wt = 'KG'.
+  append gs_unitsofmeasure to gt_unitsofmeasure.
+
