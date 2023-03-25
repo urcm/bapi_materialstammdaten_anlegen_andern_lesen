@@ -200,3 +200,7 @@ start-of-selection.
   gs_unitsofmeasure-unit_of_wt = 'KG'.
   append gs_unitsofmeasure to gt_unitsofmeasure.
 
+  gs_unitsofmeasurex-alt_unit = 'EA'.
+  gs_unitsofmeasurex-gross_wt = abap_true.
+  gs_unitsofmeasurex-unit_of_wt = abap_true.
+  append gs_unitsofmeasurex to gt_unitsofmeasurex.
