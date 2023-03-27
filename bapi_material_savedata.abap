@@ -204,3 +204,47 @@ start-of-selection.
   gs_unitsofmeasurex-gross_wt = abap_true.
   gs_unitsofmeasurex-unit_of_wt = abap_true.
   append gs_unitsofmeasurex to gt_unitsofmeasurex.
+  
+  
+  call function 'BAPI_MATERIAL_SAVEDATA'
+    exporting
+      headdata             = gs_bapimathead    " Header segment with control information
+      clientdata           = gs_clientdata    " Client-specific material data
+      clientdatax          = gs_clientdatax    " Information on update for CLIENTDATA
+      plantdata            = gs_plantdata    " Plant-specific material data
+      plantdatax           = gs_plantdatax    " Information on update for PLANTDATA
+*     forecastparameters   =     " Forecast Parameters
+*     forecastparametersx  =     " Information on update for FORECASTDATA
+*     planningdata         =     " Planning data
+*     planningdatax        =     " Information on update for PLANNINGDATA
+      storagelocationdata  = gs_storagelocationdata    " Storage-location-specific material data
+      storagelocationdatax = gs_storagelocationdatax    " Information on update for STORAGELOCATIONDATA
+      valuationdata        = gs_valuationdata    " Valuation data
+      valuationdatax       = gs_valuationdatax    " Information on update for VALUATIONDATA
+*     warehousenumberdata  =     " Warehouse-number-specific material data
+*     warehousenumberdatax =     " Information on update for WAREHOUSEDATA
+*     salesdata            =     " Sales data
+*     salesdatax           =     " Information on update for SALESDATA
+*     storagetypedata      =     " Storage-type-specific material data
+*     storagetypedatax     =     " Information on update for STORAGETYPEDATA
+*     flag_online          = SPACE    " No ALE Field Selection
+*     flag_cad_call        = SPACE    " Call From CAD System
+*     no_dequeue           = SPACE    " Screens, display user entry
+*     no_rollback_work     = SPACE    " Override rollback if error occurs
+    importing
+      return               = gs_return   " Return parameters
+    tables
+      materialdescription  = gt_materialdescription   " Material descriptions
+      unitsofmeasure       = gt_unitsofmeasure    " Units of measure
+      unitsofmeasurex      = gt_unitsofmeasurex    " Information on update for UNITSOFMEASURE
+*     internationalartnos  =     " International Article Numbers (EANs)
+*     materiallongtext     =     " Long texts
+*     taxclassifications   =     " Tax classifications
+      returnmessages       = gt_returnmessages  " All messages
+*     prtdata              =     " Production resource/tool (PRT) fields in the material master
+*     prtdatax             =     " Information on update for PRTDATAX
+*     extensionin          =     " Reference Structure for BAPI Parameters EXTENSIONIN/EXTENSIO
+*     extensioninx         =     " Reference Structure for BAPI Parameters EXTENSIONIN/EXTENSIO
+    .
+    
+    
