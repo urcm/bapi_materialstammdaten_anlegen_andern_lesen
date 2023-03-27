@@ -248,3 +248,9 @@ start-of-selection.
     .
     
     
+  loop at gt_returnmessages assigning field-symbol(<fs_mes>).
+    write: / <fs_mes>-type,
+             <fs_mes>-id,
+             <fs_mes>-number,
+             <fs_mes>-message.
+  endloop.
