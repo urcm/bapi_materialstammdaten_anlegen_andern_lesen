@@ -258,4 +258,7 @@ start-of-selection.
   if gs_return-type = 'E'.
     call function 'BAPI_TRANSACTION_ROLLBACK'.
     write :/ 'Beim Anlegen des Materials ist ein Fehler aufgetreten.'.
+  else.
+    call function 'BAPI_TRANSACTION_COMMIT'.
+    write :/ 'Das Material wurde fehlerfrei erstellt bzw. aktualisiert.'.
   endif.
