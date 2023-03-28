@@ -254,3 +254,8 @@ start-of-selection.
              <fs_mes>-number,
              <fs_mes>-message.
   endloop.
+
+  if gs_return-type = 'E'.
+    call function 'BAPI_TRANSACTION_ROLLBACK'.
+    write :/ 'Beim Anlegen des Materials ist ein Fehler aufgetreten.'.
+  endif.
