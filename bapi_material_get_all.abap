@@ -71,3 +71,7 @@
 *tables  taxclassifications   Tax Data
 *tables  extensionout   Reference Structure for BAPI Parameters EXTENSIONIN/EXTENSIO
 *tables  return   Return Parameters
+
+data: lv_material   type mara-matnr value '000000000000000216',
+      lv_plant      type marc-werks value 'ZM03',
+      gs_clientdata type bapi_mara_ga.
