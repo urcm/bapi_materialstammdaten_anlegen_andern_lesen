@@ -75,3 +75,6 @@
 data: lv_material   type mara-matnr value '000000000000000216',
       lv_plant      type marc-werks value 'ZM03',
       gs_clientdata type bapi_mara_ga.
+      
+data: gt_materialdescription type standard table of bapi_makt_ga,
+      gt_return              type standard table of bapireturn.
