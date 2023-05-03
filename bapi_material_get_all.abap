@@ -78,3 +78,40 @@ data: lv_material   type mara-matnr value '000000000000000216',
       
 data: gt_materialdescription type standard table of bapi_makt_ga,
       gt_return              type standard table of bapireturn.
+      
+
+
+call function 'BAPI_MATERIAL_GET_ALL'
+  exporting
+    material            = lv_material    " Material Number
+*   comp_code           =     " Company Code
+*   val_area            =     " Valuation Area
+*   val_type            =     " Valuation Type
+    plant               = lv_plant    " Plant
+*   stge_loc            =     " Storage Location
+*   salesorg            =     " Sales Organization
+*   distr_chan          =     " Distribution Channel
+*   whsenumber          =     " Warehouse Number / Warehouse Complex
+*   stge_type           =     " Storage Type
+*   lifo_valuation_level =     " LIFO Valuation Level
+*   kzrfb_all           =     " Indicator: reset buffer for Material_Pre_Fetch
+  importing
+    clientdata          = gs_clientdata    " Material Data at Client Level
+*   plantdata           =     " Material Data at Plant Level
+*   forecastparameters  =     " Forecast Parameters
+*   planningdata        =     " Change Document Structure for Material Master/Product Group
+*   storagelocationdata =     " Material Data at Storage Location Level
+*   valuationdata       =     " Valuation Data
+*   warehousenumberdata =     " Warehouse Number Data
+*   salesdata           =     " Sales Data
+*   storagetypedata     =     " Storage type data
+*   prtdata             =     " Production Resource Tool (PRT) Fields in the Material Master
+*   lifovaluationdata   =     " LIFO-Relevant Material Data
+  tables
+    materialdescription = gt_materialdescription    " Material Descriptions
+*   unitsofmeasure      =     " Units of Measure
+*   internationalartnos =     " International Article Numbers (EANs)
+*   materiallongtext    =     " Long Texts
+*   taxclassifications  =     " Tax Data
+*   extensionout        =     " Reference Structure for BAPI Parameters EXTENSIONIN/EXTENSIO
+    return              = gt_return.    " Return Parameters
