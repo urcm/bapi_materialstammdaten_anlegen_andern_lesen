@@ -115,3 +115,8 @@ call function 'BAPI_MATERIAL_GET_ALL'
 *   taxclassifications  =     " Tax Data
 *   extensionout        =     " Reference Structure for BAPI Parameters EXTENSIONIN/EXTENSIO
     return              = gt_return.    " Return Parameters
+    
+    
+loop at gt_return assigning field-symbol(<fs_return>).
+  write :/ |Type : { <fs_return>-type } Code: { <fs_return>-code } Message: { <fs_return>-message }|.
+endloop.
