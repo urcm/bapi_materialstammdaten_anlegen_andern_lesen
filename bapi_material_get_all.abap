@@ -127,4 +127,6 @@ if sy-subrc eq 0.
   loop at gt_materialdescription assigning field-symbol(<fs_desc>).
     write :/ |Beschreibung: { <fs_desc>-matl_desc } Sprache: { <fs_desc>-langu_iso }|.
   endloop.
+else.
+  write :/ 'Beim Abrufen von Daten für Material ist ein Problem aufgetreten'.  
 endif.
