@@ -120,3 +120,11 @@ call function 'BAPI_MATERIAL_GET_ALL'
 loop at gt_return assigning field-symbol(<fs_return>).
   write :/ |Type : { <fs_return>-type } Code: { <fs_return>-code } Message: { <fs_return>-message }|.
 endloop.
+
+
+if sy-subrc eq 0.
+  write :/ |Material Number: { gs_clientdata-material } Type : { gs_clientdata-matl_type } Created By: { gs_clientdata-created_by }|.
+  loop at gt_materialdescription assigning field-symbol(<fs_desc>).
+    write :/ |Beschreibung: { <fs_desc>-matl_desc } Sprache: { <fs_desc>-langu_iso }|.
+  endloop.
+endif.
