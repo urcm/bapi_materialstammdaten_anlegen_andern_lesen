@@ -34,3 +34,6 @@ data: gv_matnr                 type matnr value '216',
       gt_materialvaluationdata type bapimatdobew,
       gt_material_general_data type bapimatdoa,
       gt_return                type bapireturn.
+
+
+gv_matnr  = |{ gv_matnr width = 18 alpha = in }|.
