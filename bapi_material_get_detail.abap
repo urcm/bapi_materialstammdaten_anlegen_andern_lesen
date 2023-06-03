@@ -51,3 +51,9 @@ call function 'BAPI_MATERIAL_GET_DETAIL'
     return                = gt_return    " Return Parameter
     materialplantdata     = gt_materialplantdata        " Plant data
     materialvaluationdata = gt_materialvaluationdata.    " Valuation area data
+
+cl_demo_output=>write_data( gt_material_general_data ).
+cl_demo_output=>write_data( gt_materialplantdata ).
+cl_demo_output=>write_data( gt_materialvaluationdata ).
+cl_demo_output=>write_data( gt_return ).
+cl_demo_output=>display(  ).
